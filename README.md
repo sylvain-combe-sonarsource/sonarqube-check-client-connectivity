@@ -5,14 +5,15 @@ This small okhttp client for reproduce and troubleshoot SonarQube HTTP/HTTPS cli
 Copy the Client.java file to your SonarQube host. And compile && run it as follows:
 
 ```
-java -cp "<SonarQubePath/lib/common/*" \
+java -cp "<SonarQubePath/lib/*" \
 -Djavax.net.debug=all  \
 -Djavax.net.ssl.trustStore=<pathToYourTrustStore>  \
 -Djavax.net.ssl.trustStorePassword=changeit  \
 Client.java https://urlAddressToCheck/
 ```
 
-https://badssl.com/ offers various sub-domains for additional checks.
+* https://badssl.com/ offers various sub-domains for additional checks.
+* <SonarQubePath/lib/common/* can be set for earlier (8.8-) of SonarQube
 
 ## Not yet available
 ### sonar-scanner
