@@ -2,7 +2,7 @@
 This small okhttp client for reproduce and troubleshoot SonarQube HTTP/HTTPS client connectivity 
 
 ## How to use
-Copy the Client.java file to your SonarQube host. And compile && run it as follows:
+Copy the Client.java file to your SonarQube host. And compile && run it as follows (on SonarQube 8.9):
 
 ```
 java -cp "<SonarQubePath/lib/*" \
@@ -14,6 +14,7 @@ Client.java https://urlAddressToCheck/
 
 * https://badssl.com/ offers various sub-domains for additional checks.
 * <SonarQubePath/lib/common/* can be set for earlier (8.8-) of SonarQube
+* with SonarQube 9.x the sonar-application-9xxx.jar should be used as class path
 
 ## Not yet available
 ### sonar-scanner
